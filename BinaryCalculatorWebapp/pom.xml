@@ -10,15 +10,13 @@
   <version>1.0.0</version>
   <name>BinaryCalculatorWebapp Maven Webapp</name>
   <url>http://maven.apache.org</url>
-
-<parent>
+  <parent>
 	<groupId>org.springframework.boot</groupId>
 	<artifactId>spring-boot-starter-parent</artifactId>
 	<version>2.1.2.RELEASE</version>
 	<relativePath/> <!-- lookup parent from repository -->
-</parent>
-
-<dependencies>
+  </parent>
+  <dependencies>
 	<dependency>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-web</artifactId>
@@ -37,32 +35,21 @@
 		<artifactId>spring-boot-devtools</artifactId>
 		<optional>true</optional>
 	</dependency>
-</dependencies>
-
-<build>
-    <sourceDirectory>src/main/java/com.ontariotechu.sofe3980U</sourceDirectory>   <!-- Specify Source Directory for Reports -->
+  </dependencies>
+  <build>
     <finalName>BinaryCalculatorWebapp</finalName>
-</build>
-
-<reporting> <!-- Generates Javadoc and Surefire Reports -->
-    <plugins>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-javadoc-plugin</artifactId>
-            <version>3.4.1</version>
-            <configuration>
-                <sourcepath>src/main/java/com.ontariotechu.sofe3980U</sourcepath>
-                <testSourcepath>src/test/java/com.ontariotechu.sofe3980U</testSourcepath>
-                <aggregate>true</aggregate>
-                <failOnError>false</failOnError>
-            </configuration>
-        </plugin>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-report-plugin</artifactId>
-            <version>3.0.0-M7</version>
-        </plugin>
-    </plugins>
-</reporting>
-
+	<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<configuration>
+							<mainClass>com.ontariotechu.sofe3980U.Application</mainClass>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+  </build>
 </project>
