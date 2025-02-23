@@ -13,7 +13,7 @@ spec:
         app: binarycalculator
     spec:
       containers:
-        - image: northamerica-northeast2-docker.pkg.dev/central-embassy-451821-q2/sofe3980u/binarycalculator # Use repo-path in GKE
+        - image: northamerica-northeast2-docker.pkg.dev/astute-acolyte-451812-c5/temporary # Use repo-path in GKE
           name: binarycalculator
           ports:
             - containerPort: 8080
